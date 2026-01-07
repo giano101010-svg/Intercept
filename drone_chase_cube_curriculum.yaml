@@ -1,4 +1,8 @@
 environment_parameters:
+  # Explicitly set the radius to 40m. 
+  # This ensures the agent isn't "blind" in the early stages.
+  proximity_radius: 40.0
+
   lesson_stage:
     curriculum:
       # --- STATIC PHASE ---
@@ -27,8 +31,7 @@ environment_parameters:
           behavior: Intercept
           signal_smoothing: true
           min_lesson_length: 100000 
-          # CHANGED: Lowered from 18.0 to 16.0
-          # Just proving it can hit a moving object is enough to speed it up.
+          # Thresholds kept low (16-19) to ensure fast progression
           threshold: 16.0
         value: 2.0
 
@@ -38,7 +41,6 @@ environment_parameters:
           behavior: Intercept
           signal_smoothing: true
           min_lesson_length: 100000
-          # CHANGED: Lowered from 19.0 to 17.0
           threshold: 17.0
         value: 3.0
 
@@ -48,7 +50,6 @@ environment_parameters:
           behavior: Intercept
           signal_smoothing: true
           min_lesson_length: 100000
-          # CHANGED: Lowered from 20.0 to 18.0
           threshold: 18.0
         value: 4.0
 
@@ -59,7 +60,6 @@ environment_parameters:
           behavior: Intercept
           signal_smoothing: true
           min_lesson_length: 200000
-          # CHANGED: Lowered from 21.0 to 19.0
           threshold: 19.0
         value: 5.0
 
@@ -94,5 +94,5 @@ behaviors:
     max_steps: 50000000
     time_horizon: 64
     summary_freq: 50000
-    # ADDED: Enable threading for Python trainer updates
+    # Threading enabled for CPU training (remember to use --torch-device cpu)
     threaded: true
