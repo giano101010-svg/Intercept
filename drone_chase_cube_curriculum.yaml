@@ -1,7 +1,7 @@
 environment_parameters:
   # Explicitly set the radius to 40m. 
   # This ensures the agent isn't "blind" in the early stages.
-  proximity_radius: 40.0
+  proximity_radius: 25.0
 
   lesson_stage:
     curriculum:
@@ -15,7 +15,7 @@ environment_parameters:
           # CHANGED: Raised to 20.0.
           # Since a hit gives 20.0 instantly, this forces the agent to hit.
           # Farming 20.0 points takes ~8 seconds of perfect hovering, which is less efficient.
-          threshold: 20.0 
+          threshold: 15 
         value: 0.0
 
       - name: Stage1_RandomStatic
@@ -24,7 +24,7 @@ environment_parameters:
           behavior: Intercept
           signal_smoothing: true
           min_lesson_length: 0
-          threshold: 20.0
+          threshold: 15
         value: 1.0
 
       # --- CIRCLE PHASE (RAMP UP) ---
@@ -35,7 +35,7 @@ environment_parameters:
           signal_smoothing: true
           min_lesson_length: 100000 
           # Thresholds slightly increased to ensure quality hits
-          threshold: 20.0
+          threshold: 15
         value: 2.0
 
       - name: Stage3_Circle_Slow
@@ -44,7 +44,7 @@ environment_parameters:
           behavior: Intercept
           signal_smoothing: true
           min_lesson_length: 100000
-          threshold: 21.0
+          threshold: 15
         value: 3.0
 
       - name: Stage4_Circle_Medium
@@ -53,7 +53,7 @@ environment_parameters:
           behavior: Intercept
           signal_smoothing: true
           min_lesson_length: 100000
-          threshold: 22.0
+          threshold: 15
         value: 4.0
 
       # --- RANDOM PHASE ---
@@ -63,7 +63,7 @@ environment_parameters:
           behavior: Intercept
           signal_smoothing: true
           min_lesson_length: 200000
-          threshold: 23.0
+          threshold: 15
         value: 5.0
 
       - name: Stage6_Random_Fast
