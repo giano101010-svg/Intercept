@@ -12,7 +12,10 @@ environment_parameters:
           behavior: Intercept
           signal_smoothing: true
           min_lesson_length: 0
-          threshold: 15.0 
+          # CHANGED: Raised to 20.0.
+          # Since a hit gives 20.0 instantly, this forces the agent to hit.
+          # Farming 20.0 points takes ~8 seconds of perfect hovering, which is less efficient.
+          threshold: 20.0 
         value: 0.0
 
       - name: Stage1_RandomStatic
@@ -21,7 +24,7 @@ environment_parameters:
           behavior: Intercept
           signal_smoothing: true
           min_lesson_length: 0
-          threshold: 15.0
+          threshold: 20.0
         value: 1.0
 
       # --- CIRCLE PHASE (RAMP UP) ---
@@ -31,8 +34,8 @@ environment_parameters:
           behavior: Intercept
           signal_smoothing: true
           min_lesson_length: 100000 
-          # Thresholds kept low (16-19) to ensure fast progression
-          threshold: 16.0
+          # Thresholds slightly increased to ensure quality hits
+          threshold: 20.0
         value: 2.0
 
       - name: Stage3_Circle_Slow
@@ -41,7 +44,7 @@ environment_parameters:
           behavior: Intercept
           signal_smoothing: true
           min_lesson_length: 100000
-          threshold: 17.0
+          threshold: 21.0
         value: 3.0
 
       - name: Stage4_Circle_Medium
@@ -50,7 +53,7 @@ environment_parameters:
           behavior: Intercept
           signal_smoothing: true
           min_lesson_length: 100000
-          threshold: 18.0
+          threshold: 22.0
         value: 4.0
 
       # --- RANDOM PHASE ---
@@ -60,7 +63,7 @@ environment_parameters:
           behavior: Intercept
           signal_smoothing: true
           min_lesson_length: 200000
-          threshold: 19.0
+          threshold: 23.0
         value: 5.0
 
       - name: Stage6_Random_Fast
