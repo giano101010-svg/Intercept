@@ -1,0 +1,75 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1767796839",
+        "python_version": "3.10.12 (main, Jan 17 2025, 14:35:34) [GCC 11.4.0]",
+        "command_line_arguments": "/venv/main/bin/mlagents-learn drone_chase_cube_curriculum.yaml --run-id=InterceptCPU_01 --env=Lin/Intercept.x86_64 --num-envs=30 --no-graphics --force --torch-device cpu",
+        "mlagents_version": "1.1.0",
+        "mlagents_envs_version": "1.1.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "2.9.1+cu128",
+        "numpy_version": "1.23.5",
+        "end_time_seconds": "1767796842"
+    },
+    "total": 2.5373159600421786,
+    "count": 1,
+    "self": 0.27618435118347406,
+    "children": {
+        "run_training.setup": {
+            "total": 0.2240527020767331,
+            "count": 1,
+            "self": 0.2240527020767331
+        },
+        "TrainerController.start_learning": {
+            "total": 2.0370789067819715,
+            "count": 1,
+            "self": 0.00017274636775255203,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 2.017786080017686,
+                    "count": 1,
+                    "self": 2.017786080017686
+                },
+                "TrainerController.advance": {
+                    "total": 0.0018307967111468315,
+                    "count": 1,
+                    "self": 5.589798092842102e-06,
+                    "children": {
+                        "env_step": {
+                            "total": 0.0018252069130539894,
+                            "count": 1,
+                            "self": 0.0005822852253913879,
+                            "children": {
+                                "SubprocessEnvManager._take_step": {
+                                    "total": 0.0012429216876626015,
+                                    "count": 1,
+                                    "self": 2.5799497961997986e-05,
+                                    "children": {
+                                        "TorchPolicy.evaluate": {
+                                            "total": 0.0012171221897006035,
+                                            "count": 1,
+                                            "self": 0.0012171221897006035
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "TrainerController._save_models": {
+                    "total": 0.01728928368538618,
+                    "count": 1,
+                    "self": 1.231953501701355e-05,
+                    "children": {
+                        "RLTrainer._checkpoint": {
+                            "total": 0.017276964150369167,
+                            "count": 1,
+                            "self": 0.017276964150369167
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

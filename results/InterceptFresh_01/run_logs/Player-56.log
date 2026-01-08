@@ -1,0 +1,20 @@
+The selected window backend is x11 
+Mono path[0] = '/workspace/Intercept/Lin/Intercept_Data/Managed'
+Mono config path = '/workspace/Intercept/Lin/Intercept_Data/MonoBleedingEdge/etc'
+* Assertion at gc.c:1066, condition `is_ok (error)' not met, function:init_finalizer_thread, Couldn't create thread. Error 0x0 assembly:<unknown assembly> type:<unknown type> member:(null)
+
+Caught fatal signal - signo:6 code:-6 errno:0 addr:0x3ed1
+Obtained 13 stack frames.
+#0  0x007fa253902476 in raise
+#1  0x007fa2538e87f3 in abort
+#2  0x007fa182e5f04d in monoeg_assert_abort
+#3  0x007fa182e48746 in (Unknown)
+#4  0x007fa182e5f365 in (Unknown)
+#5  0x007fa182e5f49e in monoeg_assertion_message
+#6  0x007fa182e38c4e in (Unknown)
+#7  0x007fa182d679c7 in (Unknown)
+#8  0x007fa182c459a1 in (Unknown)
+#9  0x007fa2551990b2 in PlayerMain(int, char**)
+#10 0x007fa2538e9d90 in (Unknown)
+#11 0x007fa2538e9e40 in __libc_start_main
+#12 0x00000000201029 in (Unknown)

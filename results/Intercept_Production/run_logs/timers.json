@@ -1,0 +1,47 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1767813834",
+        "python_version": "3.10.12 (main, Jan 17 2025, 14:35:34) [GCC 11.4.0]",
+        "command_line_arguments": "/venv/main/bin/mlagents-learn drone_chase_cube_curriculum.yaml --run-id=Intercept_Production --env=Lin/Intercept.x86_64 --num-envs=40 --no-graphics --force --torch-device cpu",
+        "mlagents_version": "1.1.0",
+        "mlagents_envs_version": "1.1.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "2.1.2+cpu",
+        "numpy_version": "1.23.5",
+        "end_time_seconds": "1767813834"
+    },
+    "total": 0.2272180775180459,
+    "count": 1,
+    "self": 0.051429588347673416,
+    "children": {
+        "run_training.setup": {
+            "total": 0.1751387119293213,
+            "count": 1,
+            "self": 0.1751387119293213
+        },
+        "TrainerController.start_learning": {
+            "total": 0.000649777241051197,
+            "count": 1,
+            "self": 0.00026999879628419876,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 0.0003692088648676872,
+                    "count": 1,
+                    "self": 0.0003692088648676872
+                },
+                "trainer_threads": {
+                    "total": 8.00006091594696e-07,
+                    "count": 1,
+                    "self": 8.00006091594696e-07
+                },
+                "TrainerController._save_models": {
+                    "total": 9.76957380771637e-06,
+                    "count": 1,
+                    "self": 9.76957380771637e-06
+                }
+            }
+        }
+    }
+}
