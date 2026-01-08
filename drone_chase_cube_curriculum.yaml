@@ -10,21 +10,21 @@ environment_parameters:
         completion_criteria:
           measure: reward
           behavior: Intercept
-          signal_smoothing: true
+          signal_smoothing: false
           min_lesson_length: 0
           # CHANGED: Raised to 20.0.
           # Since a hit gives 20.0 instantly, this forces the agent to hit.
           # Farming 20.0 points takes ~8 seconds of perfect hovering, which is less efficient.
-          threshold: 15 
+          threshold: 20
         value: 0.0
 
       - name: Stage1_RandomStatic
         completion_criteria:
           measure: reward
           behavior: Intercept
-          signal_smoothing: true
+          signal_smoothing: false
           min_lesson_length: 0
-          threshold: 15
+          threshold: 20
         value: 1.0
 
       # --- CIRCLE PHASE (RAMP UP) ---
